@@ -31,3 +31,12 @@ gunicorn --bind 0.0.0.0:8888 wsgi:app
 
 
 Any questions please contact: [anderson.lima@shawandpartners.com](mailto:anderson.lima@shawandpartners.com)
+
+
+# Modification done by Mohamed Eid ===>
+
+1: added 2 more packages in the requierments.txt ( Werkzeug==2.2.2, gunicorn==20.1.0 ) to fix a flask requierment to run on python 3.12,
+    also to be able to run the app using the gunicorn command I had to add gunicorn to the requierments.txt file
+2: used a small python-alpine image for faster startup
+3: created a Dockerfile to build the app and exposing it's port (8888)
+4: created a Docker-compose file to boot up the app for fast local testing
